@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
