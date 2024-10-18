@@ -3,8 +3,10 @@ import React from 'react'
 function Work() {
   return (
     <div className=' lg:mx-36 mt-20'>
-        <h1>Work Experience</h1>
-        <p>Fullstack developer @ <span className='text-white'>Wipro</span></p>
+        <h1 className='text-2xl'>Work Experience</h1>
+        <div className='hover:bg-[#15213a] p-4 hover:shadow-lg'>
+        <p className=' text-lg'>Fullstack developer @ <span className='text-white'>Wipro</span></p>
+        <p className='text-sm'>2021-2024</p>
         <br/>
         <ul className=' list-disc ml-4 mb-5'>
             <li>Developed, maintained, and tested the UI for an Embedded Web Server using
@@ -21,6 +23,7 @@ function Work() {
                 bringing the web UI codebase to the latest standards.
             </li>
         </ul>
+        </div>
     </div>
   )
 }
