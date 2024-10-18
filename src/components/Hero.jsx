@@ -12,7 +12,7 @@ function Hero() {
          style={{ fontFamily: '"Protest Strike", sans-serif' }}>See Projects</button>
         </div>
         <div className='flex justify-center items-center'>
-            <img src={profilePic} className='h-72 w-72 rounded-full'></img>
+            <img src={profilePic} className='hidden md:block h-72 w-72 rounded-full'></img>
         </div>
     </div>
   )
