@@ -8,6 +8,7 @@ html{
     color: #8892b0;
     font-family: "Inter", sans-serif;
     line-height: 1.5rem; 
+    scroll-behavior: smooth;
 }
 
 h1{

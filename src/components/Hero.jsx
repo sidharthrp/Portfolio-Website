@@ -1,21 +1,88 @@
 import React from 'react'
 import profilePic from '/images/ProfilePic.jpg'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 function Hero() {
+  const {scrollY} = useScroll();
+  const opacity = useTransform(scrollY, [0,200,500], [1,0.5,0])
+  const Y = useTransform(scrollY,[0,200], [-70,0])
   return (
-    <div className='flex justify-around mt-28'>
-        <div className='flex flex-col gap-5 justify-center items-left'>
-        <h1 className='text-lg'>Hey!</h1>
-        <h1 className='text-6xl'>I'm<span className='text-yellow-600'> Sidharth R Prakash </span></h1>
-        <h1 className='text-3xl'>A Fullstack Web Developer</h1>
-        {/* <button className='mt-4 bg-yellow-600 text-black w-28 h-12 rounded-2xl text-md uppercase hover:text-white'
-         style={{ fontFamily: '"Protest Strike", sans-serif' }}>See Projects</button> */}
-        </div>
-        <div className='flex justify-center items-center'>
-            <img src={profilePic} className='hidden md:block h-72 w-72 rounded-full'></img>
-        </div>
-    </div>
-  )
+      <motion.div className='flex justify-around items-center min-h-screen' 
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 1, // Stagger for both text and image sections
+            },
+          },
+        }}
+        style={{opacity:opacity,y:Y}}
+      >
+        {/* Text section */}
+        <motion.div className='flex flex-col gap-5 justify-center items-left'
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1, y: 0, 
+              transition: {
+                duration: 0.7,
+                staggerChildren: 0.4, // Apply staggerChildren to text block specifically
+              },
+            },
+          }}
+        >
+          <motion.h1 className='text-lg'
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            Hey!
+          </motion.h1>
+    
+          <motion.h1 className='text-6xl'
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            I'm <span className='text-[#5ECED4]'>Sidharth R Prakash</span>
+          </motion.h1>
+    
+          <motion.h1 className='text-3xl'
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            A Fullstack Web Developer
+          </motion.h1>
+        </motion.div>
+    
+        {/* Image section */}
+        <motion.div
+          className='flex justify-center items-center relative'
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+          }}
+        >
+          <motion.img
+            src={profilePic}
+            className='hidden md:block h-72 w-72 rounded-full object-cover'
+            alt="Profile"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          />
+        </motion.div>
+      </motion.div>
+    )
+    
 }
 
 export default Hero

@@ -2,11 +2,11 @@ import React from 'react'
 
 function Work() {
   return (
-    <div className=' lg:mx-36 mt-20'>
-        <h1 className='text-2xl'>Work Experience</h1>
-        <div className='hover:bg-[#15213a] p-4 hover:shadow-lg'>
-        <p className=' text-lg'>Fullstack developer @ <span className='text-white'>Wipro</span></p>
-        <p className='text-sm'>2021-2024</p>
+    <div className='min-h-screen lg:mx-36 mt-20'>
+        <h1 className='text-3xl mb-3'>Work Experience</h1>
+        <div className='hover:bg-[#15213a] p-4 hover:shadow-lg group hover:text-white rounded-lg text-lg'>
+        <p className=' text-xl'>Fullstack developer @ <span className='text-white group-hover:text-[#64ffda]'>Wipro</span></p>
+        <p className=''>2021-2024</p>
         <br/>
         <ul className=' list-disc ml-4 mb-5'>
             <li>Developed, maintained, and tested the UI for an Embedded Web Server using
