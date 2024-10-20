@@ -6,7 +6,7 @@ import { FaEnvelope } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-    <div className='flex justify-center items-center gap-5 mb-10'>
+    <div className='mt-20 flex justify-center items-center gap-5 mb-10'>
         <p>sidharthrprakash@gmail.com</p>
         <a href="mailto:your-sidharthrprakash@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope className='text-2xl hover:text-white' /></a>
         <a href='https://github.com/sidharthrp'  target="_blank" rel="noopener noreferrer"><FaGithub className='text-2xl hover:text-white'/></a>

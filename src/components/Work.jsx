@@ -2,7 +2,7 @@ import React from 'react'
 
 function Work() {
   return (
-    <div className='min-h-screen lg:mx-36 mt-20'>
+    <div className=' lg:mx-36 mt-20'>
         <h1 className='text-3xl mb-3'>Work Experience</h1>
         <div className='hover:bg-[#15213a] p-4 hover:shadow-lg group hover:text-white rounded-lg text-lg'>
         <p className=' text-xl'>Fullstack developer @ <span className='text-white group-hover:text-[#64ffda]'>Wipro</span></p>

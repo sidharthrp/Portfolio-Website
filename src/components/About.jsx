@@ -8,7 +8,7 @@ function About() {
     const opacity = useTransform(scrollY, [0,200,500], [0,0.5,1])
     // const Y = useTransform(scrollY,[0,1000], [-20,0])
   return (
-    <motion.div className='min-h-screen lg:mx-36' style={{opacity:opacity}}>
+    <motion.div className=' lg:mx-36' style={{opacity:opacity}}>
         <h1 className='mt-5 text-3xl'>About Me</h1>
         <div className='p-4'>
         <p className='text-lg mt-5 text-[#8892b0]'>

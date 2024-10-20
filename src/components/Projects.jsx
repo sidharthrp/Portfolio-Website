@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 
 function Projects() {
   return (
-    <div className='lg:mx-36 mt-2 min-h-screen'>
+    <div className='lg:mx-36 mt-2  mt-20'>
         <h1 className='text-3xl mb-3'>Recent Projects</h1>
         <div className='mb-3 p-4 clearfix hover:shadow-lg hover:bg-[#15213a] group hover:text-white rounded-lg'>
             <h2 className=' '><strong className='text-xl text-white group-hover:text-[#64ffda]'>E-Buy</strong> (An E-commerce Application)</h2>
